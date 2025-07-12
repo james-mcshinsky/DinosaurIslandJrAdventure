@@ -4,33 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinosaur Island Jr. Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #192278;
-            color: #ffffff;
+            font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            background: #141933;
+            color: #f1f1f1;
             line-height: 1.6;
         }
-        header {
+        header.hero {
+            background: url('https://images.unsplash.com/photo-1526404282-5f3aa6b7e648?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 2rem 1rem;
+        }
+        header.hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+        }
+        header.hero .overlay {
+            position: relative;
+            z-index: 1;
         }
         h1 {
             font-size: 3rem;
-            margin: 0;
+            margin: 0 0 1rem 0;
         }
         h2 {
             color: #ffde59;
+            margin-top: 0;
         }
         section {
-            padding: 1rem;
-            max-width: 800px;
+            padding: 2rem 1rem;
+            max-width: 1000px;
             margin: auto;
         }
-        a {
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            margin: 0.5rem;
+            background: #ffde59;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        nav {
+            background: rgba(0,0,0,0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 0.5rem 0;
+            z-index: 10;
+            text-align: center;
+        }
+        nav a {
             color: #ffde59;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 700;
         }
         footer {
             text-align: center;
@@ -39,14 +83,25 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dinosaur Island Jr. Adventure</h1>
-        <p>In this family-friendly board game, 1–5 junior park managers draw DNA, hatch dinos, build attractions, and welcome visitors to their tropical island dinosaur park.</p>
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#howtowin">How to Win</a>
+        <a href="#roundstructure">Round Structure</a>
+        <a href="#learnmore">Learn More</a>
+        <a href="#feedback">Feedback</a>
+    </nav>
+    <header class="hero">
+        <div class="overlay">
+            <h1>Dinosaur Island Jr. Adventure</h1>
+            <p>1&ndash;5 junior park managers draw DNA, hatch dinos and welcome visitors to their tropical island dinosaur park.</p>
+            <a href="https://scribelite.my.canva.site/dinosaur-island-jr-adventure-rule-book" class="btn" target="_blank">Rule Book</a>
+            <a href="https://tabletopia.com/games/dinosaur-island-jr-adventure-j46iu6/play-now" class="btn" target="_blank">Play Online</a>
+        </div>
     </header>
 
-    <section>
+    <section id="overview">
         <h2>Game Overview</h2>
-        <p>Manage your Lab to extract DNA and discover new dinosaurs. Shop in the Market for attractions, specialists, and park upgrades. Build your park and welcome visitors to earn coins and victory points!</p>
+        <p>Manage your Lab to extract DNA and discover new dinosaurs. Shop in the Market for attractions, specialists and upgrades. Build your park and welcome visitors to earn coins and victory points!</p>
         <ul>
             <li>1&ndash;5 Players</li>
             <li>Age 6+</li>
@@ -54,29 +109,29 @@
         </ul>
     </section>
 
-    <section>
+    <section id="howtowin">
         <h2>How to Win</h2>
-        <p>Earn victory points by exhibiting dinosaurs, building attractions, completing objectives, and converting leftover resources at the end of the game.</p>
+        <p>Earn victory points by exhibiting dinosaurs, building attractions, completing objectives and converting leftover resources at the end of the game.</p>
     </section>
 
-    <section>
+    <section id="roundstructure">
         <h2>Round Structure</h2>
         <ol>
             <li>The Lab &mdash; gather DNA and discover dinosaurs.</li>
-            <li>The Market &mdash; buy attractions, upgrades, or specialists.</li>
+            <li>The Market &mdash; buy attractions, upgrades or specialists.</li>
             <li>Upgrade Your Park &mdash; hatch dinos and improve security.</li>
             <li>The Park Opens &mdash; draw visitors for money or VP.</li>
             <li>Cleanup &mdash; refresh components and advance the round.</li>
         </ol>
     </section>
 
-    <section>
+    <section id="learnmore">
         <h2>Learn More</h2>
         <p><a href="https://scribelite.my.canva.site/dinosaur-island-jr-adventure-rule-book" target="_blank">Read the Rule Book</a></p>
         <p><a href="https://tabletopia.com/games/dinosaur-island-jr-adventure-j46iu6/play-now" target="_blank">Play the Game Online</a></p>
     </section>
 
-    <section>
+    <section id="feedback">
         <h2>Feedback</h2>
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeVBBGwDugwxVDfvmOYNTs_SiE83OrYRfsk2WP7DC6AKLS-Yg/viewform?usp=dialog" target="_blank">Quick Feedback Form</a></p>
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJvTjsUBzQYo9oZhItmgx5aNNM1I-qQoEg-M7Hpug5ZnIRUg/viewform?usp=dialog" target="_blank">Detailed Feedback Form</a></p>
